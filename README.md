@@ -19,7 +19,7 @@ brew update && brew upgrade
 
 - Linux-only (`x86_64` + `aarch64`) for now. macOS support will be added once macOS
   release builds exist.
-- Binaries are hosted on Cloudflare R2 and served from `https://downloads.koo.io`.
+- Binaries are hosted on Cloudflare R2 and served from `https://downloads.koo0.io`.
 - `Formula/koo.rb` is generated from `templates/koo-template.txt` by `src/koo-update.sh`
   and pushed automatically by koo-cli's release pipeline — edit the template, not the
   generated formula.
