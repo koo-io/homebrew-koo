@@ -1,18 +1,30 @@
 class Koo < Formula
   desc "Deploy to Koo from your terminal"
   homepage "https://koo.io"
-  version "0.1.6"
+  version "0.1.7"
   license "MIT"
+
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://downloads.koo0.io/koo/v0.1.7/koo-aarch64-apple-darwin.tar.gz",
+          verified: "downloads.koo0.io/"
+      sha256 "6486eb903eaf304a58011d28298c110edf267aa6e506d281a9448766fb8fc9a8"
+    else
+      url "https://downloads.koo0.io/koo/v0.1.7/koo-x86_64-apple-darwin.tar.gz",
+          verified: "downloads.koo0.io/"
+      sha256 "e18dc8d1d4feb272edd2dbfbd12eb2367cc493c68c73cd94e7867c706dc06d4f"
+    end
+  end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://downloads.koo0.io/koo/v0.1.6/koo-aarch64-unknown-linux-gnu.tar.gz",
+      url "https://downloads.koo0.io/koo/v0.1.7/koo-aarch64-unknown-linux-gnu.tar.gz",
           verified: "downloads.koo0.io/"
-      sha256 "8a8a29679754b6d2359f602194953fad0d13da1ada46ab38923b5acc80a383b3"
+      sha256 "d14e2a1166e2a83909715ae835d4a61fd3b24f62d568bc8042256c534138b012"
     else
-      url "https://downloads.koo0.io/koo/v0.1.6/koo-x86_64-unknown-linux-gnu.tar.gz",
+      url "https://downloads.koo0.io/koo/v0.1.7/koo-x86_64-unknown-linux-gnu.tar.gz",
           verified: "downloads.koo0.io/"
-      sha256 "df623856d59667e96c96186bb483de6e720e74d119368182db8e70814cf90fb6"
+      sha256 "f5eea617404c0e43257f939a6679f8e830b70a1959e80b7c27443e398eb6232a"
     end
   end
 
